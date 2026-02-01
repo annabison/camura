@@ -1562,7 +1562,7 @@
 		}
 
 		&:after {
-			@include vendor('background-image', ('linear-gradient(top, rgba(23,24,32,0.35), rgba(23,24,32,0.35))', 'url("images/overlay.png");'));
+			background-image: none;
 			content: '';
 			display: block;
 			height: 100%;
