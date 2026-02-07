@@ -49,25 +49,87 @@ body.landing #header {
 #banner {
     background-color: #739c7f; /* Fallback */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.jpg");
-    /* Note: You might need to check if banner.jpg exists or choose a good background fit */
 }
 
 #banner .content {
-    background: rgba(255, 255, 255, 0.98); /* Light box for text, almost opaque */
+    background: rgba(255, 255, 255, 0.98); /* Light box for text */
     color: #555;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 3em 4em; /* Reduced padding (was 6em) to save space */
+}
+
+/* Typography for the "Slogan" side (Left) */
+#banner header {
+    text-align: right; /* Ensure alignment */
 }
 
 #banner header h2 {
-    color: #739c7f; /* Logotype color */
-    font-size: 2em; /* Reduced from 2.5em */
-    margin-bottom: 0.5em;
+    color: #3d4449;
+    font-size: 2.2em;
+    margin-bottom: 0.2em;
+    letter-spacing: -0.02em;
 }
 
 #banner header p {
-    color: #444 !important; /* Force dark text for subheadings */
-    font-weight: 500;
+    color: #666 !important;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* New Logo Box (Right) */
+.logo-box {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3em;
+    padding: 1.5em 2em;
+    border: 2px solid #739c7f;
+    text-align: center;
+    background: #fff;
+    min-width: 220px;
+    box-shadow: 0 5px 15px rgba(115, 156, 127, 0.15);
+    border-radius: 2px;
+}
+
+.logo-box h3 {
+    margin: 0;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.8em;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.logo-box span {
+    display: block;
+    font-size: 0.85em;
+    color: #739c7f;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 0.4em;
+    font-weight: 600;
+}
+
+/* Mobile Responsiveness for Banner */
+@media screen and (max-width: 980px) {
+    #banner .content {
+        padding: 3em 2em;
+    }
+    
+    #banner header {
+        display: block;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .logo-box {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 280px;
+    }
 }
 
 /* Spotlights (The zig-zag sections) */
