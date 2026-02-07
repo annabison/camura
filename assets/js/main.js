@@ -273,11 +273,47 @@
 
 })(jQuery);
 
-// Simple Cookie Consent Banner (Placeholder)
+// Simple Cookie Consent Banner
 (function($) {
     $(function() {
         if (!localStorage.getItem('cookieConsent')) {
-            var $banner = $('<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:1em; text-align:center; z-index:10001; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">Questo sito utilizza cookie per migliorare l\'esperienza e servizi terzi come Google Maps. <a href="privacy.html" style="color:#739c7f; text-decoration:underline;">Leggi di più</a>. <button id="accept-cookies" style="margin-left:1em; background:#739c7f; border:none; color:#fff; padding:0.5em 1em; cursor:pointer; border-radius:4px;">Accetto</button></div>').appendTo('body');
+            // Determine language based on URL or HTML lang attribute
+            var path = window.location.href.toLowerCase();
+            var lang = 'it'; // default
+            if (path.indexOf('-en.html') > -1 || path.indexOf('/en/') > -1 || $('html').attr('lang') === 'en') {
+                lang = 'en';
+            } else if (path.indexOf('-es.html') > -1 || path.indexOf('/es/') > -1 || $('html').attr('lang') === 'es') {
+                lang = 'es';
+            }
+
+            // Text content per language
+            var content = {
+                'it': {
+                    text: 'Questo sito utilizza cookie per migliorare l\'esperienza e servizi terzi come Google Maps.',
+                    linkText: 'Leggi di più',
+                    linkUrl: 'privacy.html',
+                    btnText: 'Accetto'
+                },
+                'en': {
+                    text: 'This website uses cookies to improve the experience and third-party services like Google Maps.',
+                    linkText: 'Read more',
+                    linkUrl: 'privacy-en.html',
+                    btnText: 'Accept'
+                },
+                'es': {
+                    text: 'Este sitio utiliza cookies para mejorar la experiencia y servicios de terceros como Google Maps.',
+                    linkText: 'Leer más',
+                    linkUrl: 'privacy-es.html',
+                    btnText: 'Aceptar'
+                }
+            };
+
+            var t = content[lang];
+            
+            var $banner = $('<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:1em; text-align:center; z-index:10001; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">' + 
+                t.text + ' <a href="' + t.linkUrl + '" style="color:#739c7f; text-decoration:underline;">' + t.linkText + '</a>.' +
+                ' <button id="accept-cookies" style="margin-left:1em; background:#739c7f; border:none; color:#fff; padding:0.5em 1em; cursor:pointer; border-radius:4px;">' + t.btnText + '</button>' +
+                '</div>').appendTo('body');
             
             $('#accept-cookies').on('click', function() {
                 localStorage.setItem('cookieConsent', 'true');

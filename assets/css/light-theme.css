@@ -31,13 +31,17 @@ body.landing #header {
 }
 
 #header h1 a {
-    color: #3d4449;
+    color: #3d4449 !important;
     font-weight: 700;
 }
 
 #header h1 a:hover {
-    color: #739c7f;
+    color: #739c7f !important;
     text-decoration: none;
+}
+
+body.landing #header h1 a:hover {
+    color: #739c7f !important;
 }
 
 #header nav ul li a {
