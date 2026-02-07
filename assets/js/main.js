@@ -255,11 +255,15 @@
 			$lightbox.removeClass('visible');
 		});
 
-		$('.box.alt .image.fit img').css('cursor', 'zoom-in').on('click', function(e) {
+		// Use event delegation for robust handling
+		$('body').on('click', '.box.alt .image.fit img', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			$lightboxImage.attr('src', $(this).attr('src'));
 			$lightbox.addClass('visible');
 		});
+
+		// Add cursor style
+		$('.box.alt .image.fit img').css('cursor', 'zoom-in');
 
 })(jQuery);
