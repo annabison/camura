@@ -35,6 +35,11 @@ body.landing #header {
     font-weight: 700;
 }
 
+#header h1 a:hover {
+    color: #739c7f;
+    text-decoration: none;
+}
+
 #header nav ul li a {
     color: #555; /* Darker for better contrast */
     border: 0;
