@@ -286,3 +286,23 @@
         }
     });
 })(jQuery);
+
+// Click-to-Load Map Integration
+(function($) {
+    $(function() {
+        $('body').on('click', '.map-placeholder', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var src = $this.data('src');
+            var $iframe = $('<iframe>')
+                .attr('src', src)
+                .attr('width', '100%')
+                .attr('height', '100%')
+                .css('border', '0')
+                .attr('allowfullscreen', '')
+                .attr('loading', 'lazy')
+                .attr('referrerpolicy', 'no-referrer-when-downgrade');
+            $this.replaceWith($iframe);
+        });
+    });
+})(jQuery);
