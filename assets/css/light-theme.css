@@ -353,3 +353,20 @@ header.major:after {
     background-color: #ffffff;
     color: #739c7f !important; /* Sage Green text on hover */
 }
+
+/* User Refinements Feb 7 */
+
+/* 1. Reduce space below header description (before the green line) */
+header.major p {
+    margin-bottom: 0.5em !important;
+}
+
+/* 2. Fix Desktop Menu Hover Color (Pink removal) */
+#header nav ul li a:hover {
+    color: #739c7f !important;
+}
+
+/* Ensure header divider line is green */
+header.major:after {
+    background: #739c7f !important;
+}

@@ -272,3 +272,17 @@
 		$('.box.alt .image.fit').css('cursor', 'zoom-in');
 
 })(jQuery);
+
+// Simple Cookie Consent Banner (Placeholder)
+(function($) {
+    $(function() {
+        if (!localStorage.getItem('cookieConsent')) {
+            var $banner = $('<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:#333; color:#fff; padding:1em; text-align:center; z-index:10001; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">Questo sito utilizza cookie per migliorare l\'esperienza e servizi terzi come Google Maps. <a href="privacy.html" style="color:#739c7f; text-decoration:underline;">Leggi di più</a>. <button id="accept-cookies" style="margin-left:1em; background:#739c7f; border:none; color:#fff; padding:0.5em 1em; cursor:pointer; border-radius:4px;">Accetto</button></div>').appendTo('body');
+            
+            $('#accept-cookies').on('click', function() {
+                localStorage.setItem('cookieConsent', 'true');
+                $banner.fadeOut();
+            });
+        }
+    });
+})(jQuery);
