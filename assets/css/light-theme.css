@@ -48,87 +48,95 @@ body.landing #header {
 /* Banner Section */
 #banner {
     background-color: #739c7f; /* Fallback */
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../images/banner.jpg");
 }
 
 #banner .content {
-    background: rgba(255, 255, 255, 0.98); /* Light box for text */
-    color: #555;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    padding: 3em 4em; /* Reduced padding (was 6em) to save space */
+    background: transparent; /* Remove white box */
+    box-shadow: none;
+    padding: 2em; /* Minimal padding */
+    display: flex; /* Flex layout for side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* Typography for the "Slogan" side (Left) */
 #banner header {
-    text-align: right; /* Ensure alignment */
+    text-align: left;
+    flex: 1; /* Take available space */
+    padding-right: 2em;
 }
 
 #banner header h2 {
-    color: #3d4449;
-    font-size: 2.2em;
-    margin-bottom: 0.2em;
-    letter-spacing: -0.02em;
+    color: #ffffff; /* White text on image */
+    font-size: 2.8em; /* Larger impact for Slogan */
+    margin-bottom: 0.3em;
+    font-style: italic;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Shadow for readability */
 }
 
 #banner header p {
-    color: #666 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-weight: 400;
-    font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.4em;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 
 /* New Logo Box (Right) */
 .logo-box {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 3em;
-    padding: 1.5em 2em;
-    border: 2px solid #739c7f;
+    flex: 0 0 auto;
+    padding: 1.25em 1.5em; /* Smaller padding */
+    border: 1px solid #739c7f;
     text-align: center;
-    background: #fff;
-    min-width: 220px;
-    box-shadow: 0 5px 15px rgba(115, 156, 127, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    min-width: 160px; /* Reduced width */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     border-radius: 2px;
+    transform: rotate(0deg); /* Stable */
 }
 
 .logo-box h3 {
     margin: 0;
     color: #3d4449;
     font-family: "Roboto Slab", serif;
-    font-size: 1.8em;
-    line-height: 1.2;
+    font-size: 1.5em; /* Smaller font */
+    line-height: 1;
     font-weight: 700;
 }
 
 .logo-box span {
     display: block;
-    font-size: 0.85em;
+    font-size: 0.75em; /* Smaller font */
     color: #739c7f;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-top: 0.4em;
+    margin-top: 0.3em;
     font-weight: 600;
 }
 
 /* Mobile Responsiveness for Banner */
 @media screen and (max-width: 980px) {
     #banner .content {
-        padding: 3em 2em;
+        flex-direction: column-reverse; /* Logo on top or bottom? User asked for logo on right, implying side by side. On mobile stack is better. */
+        text-align: center;
+        padding: 4em 1em;
     }
     
     #banner header {
-        display: block;
         text-align: center;
-        margin-bottom: 2em;
+        padding-right: 0;
+        margin-top: 2em;
     }
 
     .logo-box {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 280px;
+        width: auto;
+        min-width: 140px;
     }
 }
 
