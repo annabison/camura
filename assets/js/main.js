@@ -247,4 +247,19 @@
 		$banner
 			._parallax();
 
+	// Lightbox
+		var $lightbox = $('<div id="lightbox-overlay"></div>').appendTo($body),
+			$lightboxImage = $('<img id="lightbox-image">').appendTo($lightbox);
+
+		$lightbox.on('click', function() {
+			$lightbox.removeClass('visible');
+		});
+
+		$('.box.alt .image.fit img').css('cursor', 'zoom-in').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$lightboxImage.attr('src', $(this).attr('src'));
+			$lightbox.addClass('visible');
+		});
+
 })(jQuery);
