@@ -290,3 +290,66 @@ textarea:focus {
 .spotlight.bottom .goto-next {
     color: #fff; /* On banner image */
 }
+
+/* FIXES & REFINEMENTS */
+
+/* 1. Fix "Our Services" Subtitle Readability */
+/* Ensure the paragraph inside the major header in the light service section is dark grey */
+.wrapper.style1 header.major p {
+    color: #666666 !important;
+}
+
+/* Change the accent line under headers from pink to sage */
+header.major:after {
+    background: #739c7f;
+}
+
+/* 2. Mobile Menu Styling (Tortora/Salvia Theme) */
+
+/* The top bar on mobile */
+#titleBar {
+    background: #ffffff; /* White background instead of dark */
+    color: #3d4449;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#titleBar .title {
+    color: #3d4449; /* Dark text for "Ca' Mura" */
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+}
+
+/* The Hamburger Button */
+#titleBar .toggle:before {
+    background: #739c7f; /* Sage Green background */
+    color: #ffffff;      /* White icon */
+}
+
+#titleBar .toggle:active:before {
+    background: #5e8068; /* Darker sage on press */
+}
+
+/* The Slide-out Menu Panel */
+#navPanel {
+    background: #f4f7f5; /* Light Sage Tint background */
+    color: #555;         /* Dark text */
+}
+
+/* Links in the slide-out menu */
+#navPanel .link {
+    border-top-color: rgba(0,0,0,0.1); /* Light divider */
+    color: #555 !important;
+}
+
+#navPanel .link:first-child {
+    border-top-color: rgba(0,0,0,0.1);
+}
+
+#navPanel .link:last-child {
+    border-bottom-color: rgba(0,0,0,0.1);
+}
+
+#navPanel .link:hover {
+    background-color: #ffffff;
+    color: #739c7f !important; /* Sage Green text on hover */
+}
