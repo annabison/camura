@@ -4140,3 +4140,41 @@ input, select, textarea {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+/* Custom Service Cards */
+.service-card {
+    background: #ffffff;
+    padding: 2.5em 1.5em;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+    margin-top: 1em;
+    color: #444;
+}
+
+.service-card p {
+    color: #555 !important;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.service-card .icon.major {
+    margin: 0 auto;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    font-size: 1.5em;
+    background: #e44c65; /* Default accent, can be customized */
+    color: white;
+    border-radius: 100%;
+}
+.service-card .icon.major.alt {
+    /* If alt is present */
+    border: none;
+    box-shadow: none;
+}
