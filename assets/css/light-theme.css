@@ -1,0 +1,165 @@
+/* Light Theme for Residenza Ca' Mura */
+
+/* Global Colors & Backgrounds */
+html, body, #page-wrapper {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    color: #3d4449;
+    font-family: "Roboto Slab", serif; /* Elegant serif for headings */
+}
+
+strong, b {
+    color: #3d4449;
+}
+
+/* Header (Navigation) */
+#header {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+#header h1 a {
+    color: #3d4449;
+    font-weight: 700;
+}
+
+#header nav ul li a {
+    color: #666;
+    border: 0;
+}
+
+#header nav ul li a:hover {
+    color: #739c7f; /* Sage Green Hover */
+}
+
+/* Banner Section */
+#banner {
+    background-color: #739c7f; /* Fallback */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.jpg");
+    /* Note: You might need to check if banner.jpg exists or choose a good background fit */
+}
+
+#banner .content {
+    background: rgba(255, 255, 255, 0.95); /* Light box for text */
+    color: #555;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#banner header h2 {
+    color: #739c7f; /* Logotype color */
+}
+
+/* Spotlights (The zig-zag sections) */
+.spotlight {
+    background-color: #ffffff;
+    color: #555;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.spotlight .content {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.spotlight h2 {
+    color: #739c7f;
+}
+
+/* Services Section (#four) */
+.wrapper.style1 {
+    background-color: #f4f7f5; /* Very light sage tint */
+    color: #555;
+}
+
+.wrapper.style1 .box.alt .icon.major {
+    color: #739c7f; /* Icon Color */
+    border-color: rgba(115, 156, 127, 0.5); /* Icon Border */
+}
+
+.wrapper.style1 .box.alt .icon.major:after {
+    color: rgba(115, 156, 127, 0.3); /* Icon decoration */
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px rgba(115, 156, 127, 0.5);
+    color: #739c7f !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+    background-color: rgba(115, 156, 127, 0.1);
+    color: #739c7f !important;
+}
+
+.button.primary {
+    background-color: #739c7f;
+    box-shadow: none;
+    color: #ffffff !important;
+}
+
+.button.primary:hover {
+    background-color: #8ab095;
+}
+
+/* Footer & Dark Areas */
+#footer {
+    background-color: #3d4449; /* Keep footer dark for contrast */
+    color: rgba(255,255,255,0.7);
+}
+
+#footer h2, #footer h3, #footer h4 {
+    color: #fff;
+}
+
+/* Links */
+a {
+    color: #739c7f;
+    border-bottom-color: rgba(115, 156, 127, 0.5);
+}
+
+a:hover {
+    color: #8ab095;
+    border-bottom-color: transparent;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #739c7f;
+    box-shadow: 0 0 0 1px #739c7f;
+}
+
+/* Scroll Button */
+.goto-next {
+    color: #555;
+    border-bottom: none;
+}
+.goto-next:before {
+    color: #555;
+}
+.spotlight.bottom .goto-next {
+    color: #fff; /* On banner image */
+}
