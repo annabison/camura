@@ -196,6 +196,14 @@ body.landing #header {
     color: #555;
 }
 
+.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
+    color: #3d4449; /* Ensure headers in services are dark */
+}
+
+.wrapper.style1 p {
+    color: #666; /* Ensure paragraphs are dark grey */
+}
+
 .wrapper.style1 .box.alt .icon.major {
     color: #739c7f; /* Icon Color */
     border-color: rgba(115, 156, 127, 0.5); /* Icon Border */
