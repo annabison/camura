@@ -1,15 +1,21 @@
 # Residenza Ca' Mura
 
-Sito ufficiale di Residenza Ca' Mura a Cittadella. Landing page multilingua (IT/EN/ES) con contenuti essenziali e aggiornamenti in corso.
+Sito ufficiale di Residenza Ca' Mura a Cittadella. Landing page multilingua (IT/EN/ES), statica e ottimizzata per la privacy.
 
 **Sito:** https://annabison.github.io/camura
 
 ## Caratteristiche
 
-- Home in italiano, inglese e spagnolo
-- Banner/hero con immagine di copertina
-- Navigazione con selettore lingua
-- Layout responsive (mobile/tablet/desktop)
+- **Multilingua:** Supporto completo per Italiano, Inglese e Spagnolo.
+- **Privacy First:** 
+  - Nessun cookie di tracciamento al caricamento.
+  - Implementazione "Click-to-Load" per Google Maps (GDPR compliant).
+  - Privacy & Cookie Policy dedicata in doppia lingua.
+- **Compliance:** Esposizione codici obbligatori CIN (IT028032C2G5BPIKXN) e CIR.
+- **Design:**
+  - Layout responsive ottimizzato per mobile (immagini full-height).
+  - Design simmetrico per le sezioni Stanze (Tortora/Salvia).
+  - Tema personalizzato "Sage Green" (verde salvia).
 
 ## 🛠 Tech Stack
 
@@ -22,4 +28,4 @@ Progetto realizzato con approccio *static-site* per massimizzare velocità e sic
 
 ## Licenza
 
-Questo progetto include il template HTML5 UP “Landed”. Per i dettagli, vedi [LICENSE.txt](LICENSE.txt).
+Questo progetto include il template HTML5 UP “Landed”. Per i dettagli, vedi [LICENSE](LICENSE).
