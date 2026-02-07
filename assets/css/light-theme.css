@@ -86,25 +86,27 @@ body.landing #header {
 
 #banner header h2 {
     color: #ffffff;
-    font-size: 2.8em;
-    margin-bottom: 0px;
-    font-style: italic;
-    font-family: "Roboto Slab", serif;
-    font-weight: 300;
-    line-height: 1.1;
+    font-size: 2.2em; /* Smaller as requested */
+    margin-bottom: 0.1em;
+    font-family: "Roboto", sans-serif; /* Back to original font */
+    font-weight: 100; /* Thin weight */
+    font-style: normal; /* Cleaner look, or italic if preferred */
+    line-height: 1.2;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     white-space: nowrap;
+    letter-spacing: -0.02em;
 }
 
 #banner header p {
     color: rgba(255, 255, 255, 0.9) !important;
-    font-weight: 400;
-    font-size: 1.4em;
+    font-weight: 300; /* Lighter weight for subtext too */
+    font-size: 1.2em;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em; /* More spacing for elegance */
     text-shadow: 0 1px 5px rgba(0,0,0,0.5);
     white-space: nowrap;
+    font-family: "Roboto", sans-serif;
 }
 
 /* New Logo Box (Right) */
