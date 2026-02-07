@@ -383,3 +383,10 @@ header.major p {
 header.major:after {
     background: #739c7f !important;
 }
+
+/* Increase height of Spotlight images on mobile/tablet */
+@media screen and (max-width: 980px) {
+    .spotlight .image.main {
+        max-height: 60vh !important; /* Was 40vh, increased to show more image */
+    }
+}
