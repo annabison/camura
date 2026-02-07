@@ -256,6 +256,10 @@ input[type="button"]:hover,
     color: rgba(255,255,255,0.7);
 }
 
+#footer strong, #footer b {
+    color: #ffffff;
+}
+
 #footer h2, #footer h3, #footer h4 {
     color: #fff;
 }
