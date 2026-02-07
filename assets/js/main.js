@@ -256,14 +256,19 @@
 		});
 
 		// Use event delegation for robust handling
-		$('body').on('click', '.box.alt .image.fit img', function(e) {
+		// Note: Target the span.image container because the template adds a :before overlay 
+		// that covers the img element, blocking clicks on the img itself.
+		$('body').on('click', '.box.alt .image.fit', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-			$lightboxImage.attr('src', $(this).attr('src'));
-			$lightbox.addClass('visible');
+			var $img = $(this).find('img');
+			if ($img.length > 0) {
+				$lightboxImage.attr('src', $img.attr('src'));
+				$lightbox.addClass('visible');
+			}
 		});
 
-		// Add cursor style
-		$('.box.alt .image.fit img').css('cursor', 'zoom-in');
+		// Add cursor style to the container
+		$('.box.alt .image.fit').css('cursor', 'zoom-in');
 
 })(jQuery);
