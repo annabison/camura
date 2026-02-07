@@ -4167,11 +4167,15 @@ input, select, textarea {
     margin: 0 auto;
     width: 4em;
     height: 4em;
-    line-height: 4em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
-    background: #e44c65; /* Default accent, can be customized */
+    background: #6D9476; /* Sage/Salvia Green */
     color: white;
     border-radius: 100%;
+    /* Override potential legacy styles */
+    line-height: normal; 
 }
 .service-card .icon.major.alt {
     /* If alt is present */
